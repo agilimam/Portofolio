@@ -1,0 +1,106 @@
+/* Container Utama Contact Page */
+.contact-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 120px 2rem 4rem;
+}
+
+.contact-header {
+    text-align: center;
+    margin-bottom: 3.5rem;
+}
+
+.contact-subtitle {
+    color: var(--text-gray, #a0aec0);
+    font-size: 0.95rem;
+    max-width: 650px;
+    margin: 0.8rem auto 0;
+    line-height: 1.6;
+}
+
+/* Grid Layout 3 Kolom */
+.contact-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+}
+
+/* Kartu Kontak Individual */
+.contact-card {
+    background: var(--bg-card, #1a2026);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 16px;
+    padding: 2rem 1.8rem;
+    text-align: left;
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contact-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--accent-green, #00e676);
+    box-shadow: 0 10px 25px rgba(0, 230, 118, 0.12);
+}
+
+.contact-card .card-icon {
+    width: 50px;
+    height: 50px;
+    background: rgba(0, 230, 118, 0.1);
+    border: 1px solid rgba(0, 230, 118, 0.25);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--accent-green, #00e676);
+    font-size: 1.3rem;
+    margin-bottom: 1.2rem;
+}
+
+.contact-card h3 {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--text-white, #ffffff);
+    margin-bottom: 0.4rem;
+}
+
+.contact-card p {
+    font-size: 0.88rem;
+    color: var(--text-gray, #a0aec0);
+    margin-bottom: 1.5rem;
+    word-break: break-all;
+}
+
+/* Link Aksi di Bawah Kartu */
+.card-action {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--accent-green, #00e676);
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: gap 0.3s ease;
+}
+
+.contact-card:hover .card-action {
+    gap: 0.8rem;
+}
+
+/* Responsif Tablet & Mobile Android */
+@media (max-width: 992px) {
+    .contact-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .contact-container {
+        padding: 100px 1.2rem 3rem;
+    }
+
+    .contact-grid {
+        grid-template-columns: 1fr;
+    }
+}

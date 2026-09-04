@@ -1,0 +1,161 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --bg-dark: #0b0f12;
+    --bg-card: #161b20;
+    --accent-green: #00e676;
+    --accent-green-dark: #00b050;
+    --text-white: #ffffff;
+    --text-gray: #a0aec0;
+}
+
+html {
+    scroll-behavior: smooth;
+    height: 100%;
+}
+
+/* Base Body Flexbox Fix */
+body {
+    background-color: var(--bg-dark);
+    color: var(--text-white);
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    position: relative;
+    overflow-x: hidden;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+
+    /* Background Grid Pattern */
+    background-image:
+        linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+        radial-gradient(rgba(0, 230, 118, 0.12) 1px, transparent 1px);
+    background-size: 40px 40px, 40px 40px, 24px 24px;
+    background-position: center center;
+}
+
+/* Glow Background Ambient (Disimpan agar tidak merusak Flex Layout) */
+body::before,
+body::after {
+    content: '';
+    position: fixed;
+    width: 500px;
+    height: 500px;
+    border-radius: 50%;
+    filter: blur(120px);
+    pointer-events: none;
+    z-index: 0;
+}
+
+body::before {
+    top: -100px;
+    right: -100px;
+    background: rgba(0, 230, 118, 0.15);
+}
+
+body::after {
+    top: 600px;
+    left: -150px;
+    background: rgba(0, 180, 216, 0.10);
+}
+
+/* Mendorong Konten Utama Mengisi Ruang */
+main {
+    flex: 1 0 auto;
+    position: relative;
+    z-index: 1;
+}
+
+/* Header / Navbar */
+header {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    background: rgba(11, 15, 18, 0.85);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+nav {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1.2rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--text-white);
+}
+
+.nav-links {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--text-gray);
+    font-size: 0.95rem;
+    transition: 0.3s;
+}
+
+.nav-links a.active,
+.nav-links a:hover {
+    color: var(--accent-green);
+}
+
+.nav-btn .btn-talk {
+    padding: 0.6rem 1.4rem;
+    border: 1px solid var(--accent-green);
+    border-radius: 30px;
+    color: var(--text-white);
+    text-decoration: none;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: 0.3s;
+}
+
+.nav-btn .btn-talk:hover {
+    background: var(--accent-green);
+    color: var(--bg-dark);
+}
+
+/* Footer Dikunci di Paling Bawah */
+footer {
+    flex-shrink: 0;
+    text-align: center;
+    padding: 1.8rem 2rem;
+    background: rgba(11, 15, 18, 0.95);
+    color: var(--text-gray);
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    width: 100%;
+    position: relative;
+    z-index: 10;
+}
+
+@media (max-width: 768px) {
+    nav {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 0.8rem;
+        padding: 1rem;
+    }
+
+    .nav-links {
+        gap: 1rem;
+        font-size: 0.85rem;
+    }
+}

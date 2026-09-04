@@ -1,0 +1,187 @@
+/* Layout Container Halaman Project */
+main.projects-container {
+    flex: 1 0 auto;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 140px 2rem 4rem;
+    /* Jarak aman dari Navbar */
+    width: 100%;
+    position: relative;
+    z-index: 1;
+}
+
+.projects-header {
+    text-align: center;
+    margin-bottom: 3.5rem;
+}
+
+.section-label {
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: var(--text-gray, #a0aec0);
+}
+
+.projects-header .section-title {
+    font-size: 2.8rem;
+    font-weight: 800;
+    color: var(--accent-green, #00e676);
+    margin-bottom: 0.8rem;
+}
+
+.projects-subtitle {
+    color: var(--text-gray, #a0aec0);
+    max-width: 600px;
+    margin: 0 auto;
+    font-size: 0.95rem;
+}
+
+/* Grid Layout Dikunci 3 Kolom Desktop */
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    width: 100%;
+}
+
+/* Style Kartu Project */
+.project-card {
+    background: #161b20;
+    border-radius: 16px;
+    overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-7px);
+    border-color: var(--accent-green, #00e676);
+    box-shadow: 0 12px 30px rgba(0, 230, 118, 0.15);
+}
+
+/* Area Gambar */
+.project-image {
+    position: relative;
+    width: 100%;
+    height: 180px;
+    overflow: hidden;
+    background: #0b0f12;
+}
+
+.project-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+.project-card:hover .project-image img {
+    transform: scale(1.05);
+}
+
+/* Hover Overlay */
+.project-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(11, 15, 18, 0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.project-card:hover .project-overlay {
+    opacity: 1;
+}
+
+.overlay-btn {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    background: var(--accent-green, #00e676);
+    color: #0b0f12;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    text-decoration: none;
+}
+
+/* Isi Konten Kartu */
+.project-content {
+    padding: 1.2rem 1.5rem 1.5rem;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.project-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+    margin-bottom: 0.8rem;
+}
+
+.tag {
+    background: rgba(0, 230, 118, 0.1);
+    color: var(--accent-green, #00e676);
+    padding: 0.2rem 0.5rem;
+    border-radius: 6px;
+    font-size: 0.72rem;
+    font-weight: 600;
+}
+
+.project-content h3 {
+    font-size: 1.1rem;
+    color: #ffffff;
+    margin-bottom: 0.6rem;
+    line-height: 1.35;
+}
+
+.project-content p {
+    color: var(--text-gray, #a0aec0);
+    font-size: 0.85rem;
+    line-height: 1.5;
+    margin-bottom: 1.5rem;
+    flex-grow: 1;
+}
+
+/* Footer Kartu */
+.project-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 1rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.project-date {
+    font-size: 0.75rem;
+    color: var(--text-gray, #a0aec0);
+}
+
+.project-link {
+    color: var(--accent-green, #00e676);
+    font-size: 0.82rem;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+/* Responsif Tablet & Mobile */
+@media (max-width: 992px) {
+    .projects-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
+}

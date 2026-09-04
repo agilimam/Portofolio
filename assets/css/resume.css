@@ -1,0 +1,183 @@
+/* Layout Halaman Resume */
+.resume-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 120px 2rem 4rem;
+}
+
+.resume-header {
+    margin-bottom: 3rem;
+}
+
+.resume-category-title {
+    font-size: 1.8rem;
+    color: var(--accent-green);
+    margin-bottom: 1.5rem;
+    position: relative;
+    display: inline-block;
+}
+
+.resume-category-title::after {
+    content: '';
+    position: absolute;
+    bottom: -6px;
+    left: 0;
+    width: 40px;
+    height: 3px;
+    background: var(--accent-green);
+    border-radius: 2px;
+}
+
+.resume-section {
+    margin-bottom: 4rem;
+}
+
+/* Technical & Soft Skills Card Grid */
+.skills-card-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+}
+
+.skill-feature-card {
+    background: var(--bg-card);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 12px;
+    padding: 2rem 1.8rem;
+    text-align: left;
+    transition: all 0.3s ease;
+}
+
+.skill-feature-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--accent-green);
+}
+
+.skill-feature-card .card-icon {
+    font-size: 2.2rem;
+    color: var(--accent-green);
+    margin-bottom: 1.2rem;
+}
+
+.skill-feature-card h3 {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--text-white);
+    margin-bottom: 0.8rem;
+}
+
+.skill-feature-card p {
+    font-size: 0.88rem;
+    color: var(--text-gray);
+    line-height: 1.6;
+}
+
+/* Timeline Cards (Education, Experience, Project) */
+.timeline-cards {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.timeline-card {
+    background: var(--bg-card);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 16px;
+    padding: 2.5rem;
+    display: grid;
+    grid-template-columns: 35% 65%;
+    gap: 2rem;
+    align-items: start;
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.timeline-card:hover {
+    border-color: rgba(0, 230, 118, 0.4);
+    transform: translateY(-3px);
+}
+
+.card-left .timeline-date {
+    display: inline-block;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--text-white);
+    margin-bottom: 0.8rem;
+}
+
+.card-left .institution-name {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--text-white);
+    margin-bottom: 0.3rem;
+}
+
+.card-left .institution-location {
+    font-size: 0.85rem;
+    color: var(--text-gray);
+    margin-bottom: 0.8rem;
+}
+
+.card-left .degree-title {
+    font-size: 0.95rem;
+    font-style: italic;
+    color: var(--text-gray);
+}
+
+.card-left .gpa-score {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--text-white);
+    margin-top: 0.5rem;
+}
+
+.card-left .gpa-score span {
+    color: var(--accent-green);
+}
+
+.card-right ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.card-right ul li {
+    position: relative;
+    padding-left: 1.5rem;
+    margin-bottom: 0.8rem;
+    font-size: 0.92rem;
+    color: var(--text-gray);
+    line-height: 1.6;
+}
+
+.card-right ul li::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: var(--accent-green);
+    font-size: 1.2rem;
+}
+
+/* Responsif Resume */
+@media (max-width: 992px) {
+    .skills-card-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .timeline-card {
+        grid-template-columns: 1fr;
+        padding: 1.5rem;
+    }
+
+    .resume-container {
+        padding: 100px 1.2rem 3rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .skills-card-grid {
+        grid-template-columns: 1fr;
+    }
+}
