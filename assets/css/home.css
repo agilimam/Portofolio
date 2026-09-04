@@ -465,7 +465,7 @@
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-/* Tombol Utama (Primary / View Resume / Hire Me) */
+
 .btn-primary {
     background: var(--accent-green);
     color: var(--bg-dark);
@@ -473,7 +473,7 @@
     box-shadow: 0 4px 15px rgba(0, 230, 118, 0.25);
 }
 
-/* Animasi Hover Tombol Primary */
+
 .btn-primary:hover {
     transform: translateY(-3px);
     box-shadow: 0 8px 25px rgba(0, 230, 118, 0.45);
@@ -486,7 +486,7 @@
     box-shadow: 0 4px 12px rgba(0, 230, 118, 0.3);
 }
 
-/* Tombol Sekunder (Secondary / Download CV) */
+
 .btn-secondary {
     background: rgba(255, 255, 255, 0.05);
     color: var(--text-white);
@@ -494,7 +494,7 @@
     backdrop-filter: blur(5px);
 }
 
-/* Animasi Hover Tombol Secondary */
+
 .btn-secondary:hover {
     transform: translateY(-3px);
     border-color: var(--accent-green);
@@ -507,7 +507,7 @@
     transform: translateY(-1px);
 }
 
-/* Animasi Icon Dalam Tombol saat Hover */
+
 .btn i {
     font-size: 0.95rem;
     transition: transform 0.3s ease;
