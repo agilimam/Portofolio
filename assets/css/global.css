@@ -133,7 +133,7 @@ nav {
     color: var(--bg-dark);
 }
 
-/* Footer Dikunci di Paling Bawah */
+
 footer {
     flex-shrink: 0;
     text-align: center;
@@ -146,42 +146,91 @@ footer {
     z-index: 10;
 }
 
-/* ================= MOBILE ================= */
-@media (max-width: 768px) {
+@media screen and (max-width: 768px) {
 
-    nav {
-        display: grid;
-        grid-template-areas:
-            "logo btn"
-            "links links";
-        grid-template-columns: 1fr auto;
-        row-gap: 0.8rem;
-        column-gap: 0.8rem;
-        align-items: center;
-        padding: 1rem;
+   
+    nav,
+    .navbar-container {
+        display: flex !important;
+        flex-direction: row !important;
+        align-items: center !important;
+        justify-content: space-between !important;
+        flex-wrap: nowrap !important;
+        padding: 12px 15px !important;
     }
+
 
     .logo {
-        grid-area: logo;
+        font-size: 1.1rem !important;
+        white-space: nowrap !important;
+        margin: 0 !important;
     }
 
-    .nav-btn {
-        grid-area: btn;
-        justify-self: end;
-    }
 
     .nav-links {
-        grid-area: links;
-        justify-content: center;
-        flex-wrap: wrap;
-        width: 100%;
-        gap: 1rem;
-        font-size: 0.85rem;
+        display: flex !important;
+        flex-direction: row !important;
+        align-items: center !important;
+        gap: 10px !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        list-style: none !important;
     }
 
-    /* Navbar mobile jadi 2 baris -> lebih tinggi, jadi padding konten diperbesar */
-    main,
-    .hero {
-        padding-top: 130px;
+    .nav-links li a {
+        font-size: 0.8rem !important;
+        white-space: nowrap !important;
     }
+
+    .nav-btn,
+    .btn-talk {
+        display: none !important;
+    }
+
+    .contact-container,
+    main {
+        padding-top: 80px !important;
+    }
+}
+
+
+.contact-header,
+.projects-header,
+.resume-header {
+    text-align: center !important;
+    max-width: 700px !important;
+    margin: 0 auto 3.5rem auto !important;
+}
+
+
+.section-label {
+    font-size: 0.85rem !important;
+    text-transform: uppercase !important;
+    letter-spacing: 2px !important;
+    color: var(--text-gray, #a0aec0) !important;
+    margin-bottom: 0.5rem !important;
+    text-align: center !important;
+}
+
+
+.section-title,
+.projects-header .section-title,
+.contact-header .section-title,
+.resume-header .section-title {
+    font-size: 2.8rem !important;
+    font-weight: 800 !important;
+    color: var(--accent-green, #00e676) !important;
+
+    margin-bottom: 0.8rem !important;
+    text-align: center !important;
+}
+
+.contact-subtitle,
+.projects-subtitle,
+.resume-subtitle {
+    color: var(--text-gray, #a0aec0) !important;
+    font-size: 0.95rem !important;
+    line-height: 1.6 !important;
+    margin: 0 auto !important;
+    text-align: center !important;
 }
