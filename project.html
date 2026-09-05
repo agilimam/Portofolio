@@ -27,20 +27,17 @@
         </nav>
     </header>
 
-    <!-- Wajib Bungkus Seluruh Konten Utama dengan <main> -->
     <main class="projects-container">
 
         <!-- Header Title Section -->
         <div class="projects-header">
-            <p class="section-label">MY FEATURED WORK</p>
-            <h1 class="section-title">Projects</h1>
+            <h1 class="section-title">Explore My Projects</h1>
             <p class="projects-subtitle">
-                Berikut adalah beberapa proyek utama yang telah saya kembangkan, mencakup aplikasi web fullstack, sistem
-                presensi berbasis AI, dan manajemen database.
+                Here are some of the key projects I have developed, including full-stack web applications, AI-based
+                attendance systems, and database management.
             </p>
         </div>
 
-        <!-- Projects Grid -->
         <div class="projects-grid">
 
             <!-- Card 1 -->
@@ -49,7 +46,7 @@
                     <img src="https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?q=80&w=600"
                         alt="Presensi Face Recognition">
                     <div class="project-overlay">
-                        <a href="https://github.com/agilimam" target="_blank" class="overlay-btn"
+                        <a href="https://github.com/agilimam/presensiFaceId" target="_blank" class="overlay-btn"
                             title="View Source Code">
                             <i class="fab fa-github"></i>
                         </a>
@@ -64,12 +61,12 @@
                     </div>
                     <h3>Sistem Presensi Jamaah Berbasis Face Recognition</h3>
                     <p>
-                        Aplikasi web full-stack terintegrasi modul Python untuk pengolahan face embedding dan deteksi
-                        presensi.
+                        An integrated full-stack web application with Python modules for face embedding processing and
+                        attendance detection.
                     </p>
                     <div class="project-footer">
                         <span class="project-date"><i class="far fa-calendar-alt"></i> Sep 2026</span>
-                        <a href="https://github.com/agilimam" target="_blank" class="project-link">
+                        <a href="https://github.com/agilimam/presensiFaceId" target="_blank" class="project-link">
                             Source Code <i class="fas fa-arrow-right"></i>
                         </a>
                     </div>
@@ -97,8 +94,8 @@
                     </div>
                     <h3>Web Jurnal Trade</h3>
                     <p>
-                        Aplikasi manajemen jurnal perdagangan, mencakup fitur CRUD, autentikasi pengguna, dan laporan
-                        transaksi.
+                        A trading journal management application featuring CRUD operations, user authentication, and
+                        transaction reporting.
                     </p>
                     <div class="project-footer">
                         <span class="project-date"><i class="far fa-calendar-alt"></i> Web Dev</span>
@@ -109,32 +106,88 @@
                 </div>
             </div>
 
-            <!-- Card 3 -->
+            <!-- Card 3: Network Heatmap Project -->
             <div class="project-card">
                 <div class="project-image">
-                    <img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?q=80&w=600"
-                        alt="Hotel Network Support">
+                    <img src="assets/images/Lt1.png" alt="Hotel Wi-Fi Coverage Mapping - Floor Plan 1">
                     <div class="project-overlay">
-                        <a href="resume.html" class="overlay-btn" title="View Details">
-                            <i class="fas fa-info-circle"></i>
+                        <!-- Tombol untuk membuka Pop-up Modal Gambar -->
+                        <button class="overlay-btn" onclick="openHeatmapModal()" title="View All Floor Plans">
+                            <i class="fas fa-search-plus"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="project-content">
+                    <div class="project-tags">
+                        <span class="tag">Network Mapping</span>
+                        <span class="tag">Wi-Fi Heatmap</span>
+                        <span class="tag">Infrastructure</span>
+                    </div>
+                    <h3>Hotel Wi-Fi Coverage & Signal Mapping</h3>
+                    <p>
+                        Designed Wi-Fi signal coverage heatmaps and Access Point placement plans across multi-floor
+                        hotel layouts at University Hotel UMY.
+                    </p>
+                    <div class="project-footer">
+                        <span class="project-date"><i class="far fa-calendar-alt"></i> Sep - Nov 2025</span>
+                        <button onclick="openHeatmapModal()" class="project-link-btn">
+                            Read Details <i class="fas fa-arrow-right"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ================= MODAL POP-UP GALLERY ================= -->
+            <div id="heatmapModal" class="modal">
+                <div class="modal-content">
+                    <span class="close-modal" onclick="closeHeatmapModal()">&times;</span>
+                    <h2>Hotel Wi-Fi Coverage Floor Plans</h2>
+                    <p class="modal-subtitle">University Hotel UMY Signal Heatmaps & Access Point Mapping</p>
+
+                    <div class="modal-gallery">
+                        <div class="gallery-item">
+                            <img src="assets/images/Lt1.png" alt="Floor Plan Level 1">
+                            <span>Floor Plan Level 1</span>
+                        </div>
+                        <div class="gallery-item">
+                            <img src="assets/images/Lt2.png" alt="Floor Plan Level 2">
+                            <span>Floor Plan Level 2</span>
+                        </div>
+                        <div class="gallery-item">
+                            <img src="assets/images/lt3-6.png" alt="Floor Plan Level 3-6">
+                            <span>Floor Plan Level 3 - 6</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 4: Android App (Kotlin) -->
+            <div class="project-card">
+                <div class="project-image">
+                    <img src="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?q=80&w=600"
+                        alt="Pet Management Mobile App">
+                    <div class="project-overlay">
+                        <a href="https://github.com/agilimam/A5_085" target="_blank" class="overlay-btn"
+                            title="View Code">
+                            <i class="fab fa-github"></i>
                         </a>
                     </div>
                 </div>
                 <div class="project-content">
                     <div class="project-tags">
-                        <span class="tag">Networking</span>
-                        <span class="tag">LAN/Wi-Fi</span>
-                        <span class="tag">Troubleshooting</span>
+                        <span class="tag">Kotlin</span>
+                        <span class="tag">Android Studio</span>
+                        <span class="tag">Mobile App</span>
                     </div>
-                    <h3>Hotel Network & Infrastructure Support</h3>
+                    <h3>Pet Management Mobile App</h3>
                     <p>
-                        Pengelolaan dan pemeliharaan infrastruktur jaringan harian serta dukungan teknis di Universitas
-                        Hotel UMY.
+                        An Android-based mobile application developed using Kotlin for managing pet records, data entry,
+                        and editing features.
                     </p>
                     <div class="project-footer">
-                        <span class="project-date"><i class="far fa-calendar-alt"></i> Sep - Nov 2025</span>
-                        <a href="resume.html" class="project-link">
-                            Read Details <i class="fas fa-arrow-right"></i>
+                        <span class="project-date"><i class="far fa-calendar-alt"></i> 2024</span>
+                        <a href="https://github.com/agilimam/A5_085" target="_blank" class="project-link">
+                            Source Code <i class="fab fa-github"></i>
                         </a>
                     </div>
                 </div>
@@ -142,13 +195,11 @@
 
         </div>
 
-    </main> <!-- Penutup Tag Main -->
-
-    <!-- Footer Tetap di Luar Main -->
+    </main>
     <footer>
-        <p>&copy; 04 September 2026 Agil Imam Alhafizi. All rights reserved.</p>
+        <p>&copy; @2026. All rights reserved.</p>
     </footer>
-
+    <script src="assets/js/project.js"></script>
 </body>
 
 </html>

@@ -1,10 +1,9 @@
-/* Layout Container Halaman Project */
 main.projects-container {
     flex: 1 0 auto;
     max-width: 1200px;
     margin: 0 auto;
     padding: 140px 2rem 4rem;
-    /* Jarak aman dari Navbar */
+
     width: 100%;
     position: relative;
     z-index: 1;
@@ -36,7 +35,7 @@ main.projects-container {
     font-size: 0.95rem;
 }
 
-/* Grid Layout Dikunci 3 Kolom Desktop */
+
 .projects-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -44,7 +43,7 @@ main.projects-container {
     width: 100%;
 }
 
-/* Style Kartu Project */
+
 .project-card {
     background: #161b20;
     border-radius: 16px;
@@ -61,7 +60,7 @@ main.projects-container {
     box-shadow: 0 12px 30px rgba(0, 230, 118, 0.15);
 }
 
-/* Area Gambar */
+
 .project-image {
     position: relative;
     width: 100%;
@@ -81,7 +80,7 @@ main.projects-container {
     transform: scale(1.05);
 }
 
-/* Hover Overlay */
+
 .project-overlay {
     position: absolute;
     top: 0;
@@ -113,7 +112,7 @@ main.projects-container {
     text-decoration: none;
 }
 
-/* Isi Konten Kartu */
+
 .project-content {
     padding: 1.2rem 1.5rem 1.5rem;
     display: flex;
@@ -152,7 +151,7 @@ main.projects-container {
     flex-grow: 1;
 }
 
-/* Footer Kartu */
+
 .project-footer {
     display: flex;
     align-items: center;
@@ -184,4 +183,128 @@ main.projects-container {
     .projects-grid {
         grid-template-columns: 1fr;
     }
+}
+
+
+.project-link-btn {
+    background: none;
+    border: none;
+    color: var(--primary-color, #007bff);
+    font-weight: 600;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 0.95rem;
+    padding: 0;
+    transition: color 0.3s ease;
+}
+
+.project-link-btn:hover {
+    color: var(--primary-hover, #0056b3);
+}
+
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.85);
+    backdrop-filter: blur(5px);
+    overflow-y: auto;
+    padding: 20px;
+}
+
+.modal-content {
+    background-color: #ffffff;
+    margin: 40px auto;
+    padding: 30px;
+    border-radius: 12px;
+    max-width: 900px;
+    position: relative;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    color: #333;
+}
+
+.close-modal {
+    position: absolute;
+    right: 20px;
+    top: 15px;
+    font-size: 28px;
+    font-weight: bold;
+    color: #666;
+    cursor: pointer;
+    transition: color 0.2s;
+}
+
+.close-modal:hover {
+    color: #000;
+}
+
+.modal-subtitle {
+    color: #666;
+    margin-bottom: 20px;
+    font-size: 0.95rem;
+}
+
+
+.modal-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.gallery-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid #eee;
+    padding: 10px;
+    border-radius: 8px;
+    background: #f9f9f9;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 6px;
+    object-fit: contain;
+}
+
+.gallery-item span {
+    margin-top: 10px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    color: #444;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 9999;
+
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(5px);
+    overflow-y: auto;
+    padding: 20px;
+}
+
+.modal-content {
+    background-color: #ffffff;
+
+    margin: 80px auto 40px auto;
+    padding: 30px;
+    border-radius: 12px;
+    max-width: 900px;
+    position: relative;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
 }
