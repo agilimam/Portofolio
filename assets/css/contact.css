@@ -94,12 +94,9 @@
     }
 }
 
-@media (max-width: 600px) {
-    .contact-container {
-        padding: 100px 1.2rem 3rem;
-    }
 
-    .contact-grid {
-        grid-template-columns: 1fr;
+@media (max-width: 768px) {
+    .contact-container {
+        padding: 150px 1.2rem 3rem;
     }
 }
